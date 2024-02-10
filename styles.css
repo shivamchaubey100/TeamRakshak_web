@@ -1,0 +1,291 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+
+}
+
+header {
+    margin-top: 30px;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Editing the navigation tab */
+
+nav{
+    background-color: whitesmoke;   /* Adding a background strip */
+    position: fixed;
+    top: -10px;
+    height: 60px;
+    width: 105%;
+    margin-left: -10px;
+    z-index: 10001;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #080000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff8c00;
+}
+
+
+/* To make responsive for smaller screens */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    /* .hobbies-container {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .hobby-card {
+        width: calc(100% - 20px);
+    }
+    .section[data-anchor="about"] {
+        padding: 20px; 
+    }
+    
+    .section[data-anchor="about"] p {
+        font-size: 14px; 
+    }
+}
+/* Align hobby cards side by side */
+.hobbies-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Editing the hobby card */
+.hobby-card {
+    width: calc(33.33% - 40px); 
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-sizing: border-box; 
+}
+
+/* Pop up card when hover over*/
+.hobby-card:hover {
+    transform: scale(1.05);
+}
+
+.hobby-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.hobby-card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.hobby-card p {
+    color: #555;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+#fullpage {
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    
+}
+
+.section {
+    text-align: center;
+    padding: 50px 0; 
+}
+/* Editing the contact form */
+#contactForm {
+    background-color: #6a6868;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add box shadow for depth */
+
+    /* Center the form in the middle of the page */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contactForm label {
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contactForm textarea {
+    resize: vertical;
+}
+
+#contactForm button {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contactForm button:hover {
+    background-color: #e07e00;
+}
+
+/* To make contact form responsive */
+@media (max-width: 600px) {
+    #contactForm {
+        padding: 15px; /* padding for smaller screens */
+    }
+}
+
+
+/* Apply background visual effects i.e. animation, gradient... to the home section */
+/* #background{
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+} */
+
+#background {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    animation: changeBackground 15s ease infinite;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('images/background1.jpeg');
+    }
+    20% {
+        background-image: url('images/background2.jpeg');
+    }
+
+    40% {
+        background-image: url('images/background3.jpeg');
+    }
+
+    60% {
+        background-image: url('images/background4.jpeg');
+    }
+
+    80% {
+        background-image: url('images/background5.jpeg');
+    }
+    100% {
+        background-image: url('images/background1.jpeg');
+    }
+}
+
+.animation-bg h1{
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+}
+
+.description{
+    font-size: 1.4em; 
+    margin-bottom: 30px; 
+}
+
+/* Adjust image to the webpage */
+#photo {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#photo img {
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%; 
+    border: 3px solid #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#logo {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#logo img {
+    width: 400px; 
+    height: 300px; 
+}

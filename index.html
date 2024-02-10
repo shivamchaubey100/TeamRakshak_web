@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!--linking my css file -->
+    <title>Shivam Chaubey - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />    <!--using fullpage.js library to create full page scrolling webpage-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js"></script>
+    <script src="script.js"></script>   <!--linking my js file -->
+</head>
+<body>    
+    <header>
+        <nav>               <!--Adding navigation menu-->
+            <ul id="menu">
+                <li data-menuanchor="home"><a href="#home">Home</a></li>
+                <li data-menuanchor="about"><a href="#about">About</a></li>
+                <li data-menuanchor="hobbies"><a href="#hobbies">Sub-Systems</a></li>
+                <li data-menuanchor="contact"><a href="#contact">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="fullpage">
+        <div class="section" id="background" data-anchor="home">   <!--Creating a section for home-->
+            <div class="bg">
+                <div id="photo">
+                    <img src="images/rakshakLogo.gif" alt="photo">  <!--Adding my photo-->
+                </div>
+                <div class="animation-bg">
+                    <h1>Team Rakshak</h1>
+                    <h2>IIT Bombay</h2>                 
+                </div>
+                <p class="description">
+                A mile of highway will take you a mile<br>
+                But<br>
+                A mile of runway can take you anywhere
+                </p>
+            </div>            
+        </div>
+        
+        <div class="section" data-anchor="about">           <!--Creating a section for about-->
+            <div id="logo" >
+                <img src="images/rakshakLogo.gif" alt="photo">  <!--Adding logo-->
+            </div>
+            <p>
+                Rakshak IITB is the official team of IIT Bombay consisting of 40+ students from various disciplines who work collaboratively to develop a fleet of robust Unmanned Aerial Vehicles (UAVs) to support Search and Rescue Operations (SRO) in the event of a disaster. The team was formed in the year 2015 by some of the IITB enthusiasts to build drones/planes that can be used for rescue missions. These aircraft can provide relief measures in the disaster-stricken area (e.g., Landslide, Flood, Earthquake) and can be used for surveys & mapping of cities and conservation of wildlife with slight modifications. Our design efficiently tackles the above problems cost-effectively without compromising on human safety.
+
+            </p>
+            <p>
+                As of now, we have developed five planes. Each year we are trying to stretch our limits by our innovation and teamwork. We would also like to thank IITB for supporting us and providing the platform to showcase our talent at the international level.</p>
+            </div>
+
+        <div class="section" data-anchor="hobbies" id="subsystem">         <!--Creating a section for hobbies-->
+            <h2>Sub-Systems</h2>
+            <div class="hobbies-container">
+                <div class="hobby-card" onclick="location.href='https://rakshakiitb.in/Aerodynamics%20and%20Manufacturing.html';"> <!--linking it to hobby1 page-->
+                    <img src="images/aero.jpeg" alt="Hobby 1 Image">       <!--Hobby1 image-->
+                    <h3>Aerodynamics & Manufacturing</h3>
+                    <p>From conceptual design to building the large plane number of tasks....</p>
+                </div>
+
+                <div class="hobby-card" onclick="location.href='https://rakshakiitb.in/Software.html';"> <!--linking it to hobby2 page-->
+                    <img src="images/software.jpeg" alt="Hobby 2 Image">      <!--Hobby2 image-->
+                    <h3>Software</h3>
+                    <p>The Software subsystem is responsible for the onboard processing and analysis of the images....</p>
+                </div>
+
+                <div class="hobby-card" onclick="location.href='https://rakshakiitb.in/Control%20and%20Communication.html';"> <!--linking it to hobby3 page-->
+                    <img src="images/controls.jpeg" alt="Hobby 3 Image">      <!--Hobby3 image-->
+                    <h3>Controls and Communication</h3>
+                    <p>The subsystem conducts regular tests for sensor calibration and adjusting the gains of the controller. The UAV is....</p>
+                </div>
+
+                <div class="hobby-card" onclick="location.href='https://rakshakiitb.in/Marketing.html';"> <!--linking it to hobby2 page-->
+                    <img src="images/marketing.jpeg" alt="Hobby 2 Image">      <!--Hobby2 image-->
+                    <h3>Marketing</h3>
+                    <p>Marketing Subsystem Deals with the all non-technical work like design, publicity, bringing the sponsors for the team....</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="section" data-anchor="contact">         <!--Creating a section for contact-->
+            <h2>Contact us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
+                <button type="button" id="sendMessage">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
